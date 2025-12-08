@@ -17,13 +17,13 @@
             </a>
 
             <nav class="nav" aria-label="Главное меню">
-                <a href="#tour-selection" class="nav__link">Подбор тура</a>
-                <a href="#hotel-booking" class="nav__link">Бронирование отелей</a>
-                <a href="#services" class="nav__link">Наши услуги</a>
-                <a href="#about" class="nav__link">О нас</a>
+                <a href="#tour-search" class="nav__link">Поиск тура</a>
+                <a href="#telegram" class="nav__link">Telegram</a>
+                <a href="#advantages" class="nav__link">Преимущества</a>
+                <a href="#partners" class="nav__link">Партнёры</a>
                 <a href="#blog" class="nav__link">Блог</a>
-                <a href="#offers" class="nav__link">Акции</a>
-                <a href="#contacts" class="nav__link nav__link--accent">Обратная связь</a>
+                <a href="#location" class="nav__link">Адрес</a>
+                <a href="#reviews" class="nav__link nav__link--accent">Отзывы</a>
             </nav>
 
             <div class="header__contacts">
@@ -40,219 +40,45 @@
     </header>
 
     <main id="top">
-        <section class="hero" id="hero">
-            <div class="container hero__inner">
-                <div class="hero__content">
-                    <h1 class="hero__title">Подберём идеальный отдых для вас</h1>
-                    <p class="hero__subtitle">
-                        Туристическое агентство в Нижнем Новгороде. Подбор туров, отели, авиабилеты и авторские маршруты по всему миру.
-                    </p>
-                    <div class="hero__actions">
-                        <button class="btn btn--primary js-open-tour-modal" type="button">Подберите мне тур</button>
-                        <span class="hero__note">Ответим в течение 15 минут</span>
-                    </div>
-                </div>
-                <div class="hero__aside">
-                    <div class="hero__badge">Работаем с 20XX года</div>
-                    <ul class="hero__list">
-                        <li>Персональный менеджер</li>
-                        <li>Подбор туров под ваш бюджет</li>
-                        <li>Оплата онлайн и в офисе</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <section class="section section--light" id="tour-search">
             <div class="container">
-                <h2 class="section__title">Найдите тур онлайн</h2>
-                <p class="section__subtitle">Удобный поиск туров через систему Tourvisor</p>
-                <div class="tv-search-form tv-moduleid-9974674"></div>
+                <div class="tv-search-form tv-moduleid-9967577"></div>
+                <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
             </div>
         </section>
 
-        <section class="section" id="tour-selection">
+        <section class="section" id="telegram">
             <div class="container">
-                <h2 class="section__title">Подбор тура</h2>
-                <p class="section__subtitle">
-                    Оставьте заявку, и мы предложим несколько вариантов туров с учётом ваших дат, бюджета и предпочтений.
-                </p>
-                <form class="form" id="tour-request-form">
-                    <div class="form__grid">
-                        <div class="form__field">
-                            <label for="direction">Направление</label>
-                            <input type="text" id="direction" name="direction" placeholder="Страна, курорт" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="date-from">Дата вылета с</label>
-                            <input type="date" id="date-from" name="date_from" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="date-to">Дата вылета по</label>
-                            <input type="date" id="date-to" name="date_to" />
-                        </div>
-                        <div class="form__field">
-                            <label for="nights">Количество ночей</label>
-                            <input type="number" id="nights" name="nights" min="1" max="30" placeholder="7" />
-                        </div>
-                        <div class="form__field">
-                            <label for="adults">Взрослые</label>
-                            <input type="number" id="adults" name="adults" min="1" max="10" value="2" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="children">Дети</label>
-                            <input type="number" id="children" name="children" min="0" max="10" value="0" />
-                        </div>
-                        <div class="form__field">
-                            <label for="budget">Бюджет на поездку</label>
-                            <input type="text" id="budget" name="budget" placeholder="Например, до 150 000 ₽" />
-                        </div>
-                        <div class="form__field">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+7" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="example@mail.ru" />
-                        </div>
-                        <div class="form__field form__field--full">
-                            <label for="comment">Пожелания к туру</label>
-                            <textarea id="comment" name="comment" rows="3" placeholder="Пляжный отдых, all inclusive, вылет из Нижнего Новгорода..."></textarea>
-                        </div>
-                        <div class="form__field form__field--full form__field--inline">
-                            <label class="checkbox">
-                                <input type="checkbox" name="agreement" required />
-                                <span>Соглашаюсь на обработку персональных данных</span>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn btn--primary" type="submit">Отправить заявку</button>
-                </form>
+                <h2 class="section__title">Следите за новостями в путешествиях</h2>
+                <p class="section__subtitle">Подписывайтесь на наш Telegram-канал с акциями, идеями и лайфхаками</p>
+                <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Подписаться в Telegram</a>
             </div>
         </section>
 
-        <section class="section section--muted" id="hot-deals">
+        <section class="section section--light" id="advantages">
             <div class="container">
-                <h2 class="section__title">Лента горящих туров</h2>
-                <p class="section__subtitle">Актуальные спецпредложения с вылетом в ближайшие дни</p>
+                <h2 class="section__title">Почему выбирают нас</h2>
                 <div class="cards cards--3">
-                    <article class="card">
-                        <h3 class="card__title">Турция, Анталья</h3>
-                        <p class="card__meta">7 ночей · вылет в ближайшие 3 дня</p>
-                        <p class="card__price">от 65 000 ₽ за двоих</p>
-                        <button class="btn btn--outline js-open-tour-modal" type="button">Узнать подробнее</button>
-                    </article>
-                    <article class="card">
-                        <h3 class="card__title">ОАЭ, Дубай</h3>
-                        <p class="card__meta">5 ночей · завтра</p>
-                        <p class="card__price">от 78 000 ₽ за двоих</p>
-                        <button class="btn btn--outline js-open-tour-modal" type="button">Узнать подробнее</button>
-                    </article>
-                    <article class="card">
-                        <h3 class="card__title">Египет, Хургада</h3>
-                        <p class="card__meta">10 ночей · на этой неделе</p>
-                        <p class="card__price">от 92 000 ₽ за двоих</p>
-                        <button class="btn btn--outline js-open-tour-modal" type="button">Узнать подробнее</button>
-                    </article>
+                    <article class="card card--service"><h3 class="card__title">Надёжные туроператоры</h3><p class="card__text">Работаем только с проверенными партнёрами.</p></article>
+                    <article class="card card--service"><h3 class="card__title">Поддержка 24/7</h3><p class="card__text">Всегда на связи до и во время путешествия.</p></article>
+                    <article class="card card--service"><h3 class="card__title">Честные цены</h3><p class="card__text">Прозрачные условия без скрытых платежей.</p></article>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="hotel-booking">
+        <section class="section" id="partners">
             <div class="container">
-                <h2 class="section__title">Подбор и бронирование отелей</h2>
-                <p class="section__subtitle">
-                    Найдём лучший отель под ваш бюджет: городские, пляжные, семейные и бизнес-отели по всему миру.
-                </p>
-                <form class="form" id="hotel-request-form">
-                    <div class="form__grid form__grid--3">
-                        <div class="form__field">
-                            <label for="hotel-city">Город / курорт</label>
-                            <input type="text" id="hotel-city" name="hotel_city" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="hotel-date-from">Дата заезда</label>
-                            <input type="date" id="hotel-date-from" name="hotel_date_from" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="hotel-date-to">Дата выезда</label>
-                            <input type="date" id="hotel-date-to" name="hotel_date_to" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="hotel-guests">Гостей</label>
-                            <input type="number" id="hotel-guests" name="hotel_guests" min="1" value="2" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="hotel-stars">Категория отеля</label>
-                            <select id="hotel-stars" name="hotel_stars">
-                                <option value="">Не важно</option>
-                                <option value="3">3*</option>
-                                <option value="4">4*</option>
-                                <option value="5">5*</option>
-                            </select>
-                        </div>
-                        <div class="form__field">
-                            <label for="hotel-budget">Бюджет за ночь</label>
-                            <input type="text" id="hotel-budget" name="hotel_budget" placeholder="Например, до 8 000 ₽" />
-                        </div>
-                    </div>
-                    <button class="btn btn--primary" type="submit">Подобрать отель</button>
-                </form>
-            </div>
-        </section>
-
-        <section class="section section--light" id="services">
-            <div class="container">
-                <h2 class="section__title">Наши услуги</h2>
-                <div class="cards cards--3">
-                    <article class="card card--service">
-                        <h3 class="card__title">Туры по всему миру</h3>
-                        <p class="card__text">Пляжный отдых, экскурсионные и комбинированные туры, авторские маршруты.</p>
-                    </article>
-                    <article class="card card--service">
-                        <h3 class="card__title">Авиабилеты и отели</h3>
-                        <p class="card__text">Подбор удобных перелётов и проверенных отелей в любой стране.</p>
-                    </article>
-                    <article class="card card--service">
-                        <h3 class="card__title">Визы и страховки</h3>
-                        <p class="card__text">Помощь в оформлении виз, медицинских и туристических страховок.</p>
-                    </article>
+                <h2 class="section__title">Наши партнёры</h2>
+                <div class="cards cards--4">
+                    <article class="card"><h3 class="card__title">Партнёр 1</h3></article>
+                    <article class="card"><h3 class="card__title">Партнёр 2</h3></article>
+                    <article class="card"><h3 class="card__title">Партнёр 3</h3></article>
+                    <article class="card"><h3 class="card__title">Партнёр 4</h3></article>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="about">
-            <div class="container about">
-                <div class="about__content">
-                    <h2 class="section__title">О нас</h2>
-                    <p>
-                        Мы — туристическое агентство в Нижнем Новгороде, которое помогает клиентам находить комфортный отдых по честным ценам.
-                        Работаем с крупными туроператорами и тщательно подбираем варианты под ваши запросы.
-                    </p>
-                    <p>
-                        Вы можете обратиться к нам онлайн, по телефону или посетить офис по адресу: ул. Максима Горького, 152.
-                    </p>
-                </div>
-                <div class="about__stats">
-                    <div class="about__stat">
-                        <div class="about__stat-number">1000+</div>
-                        <div class="about__stat-label">довольных туристов</div>
-                    </div>
-                    <div class="about__stat">
-                        <div class="about__stat-number">10+</div>
-                        <div class="about__stat-label">лет опыта</div>
-                    </div>
-                    <div class="about__stat">
-                        <div class="about__stat-number">24/7</div>
-                        <div class="about__stat-label">поддержка клиентов</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="section section--light" id="blog">
             <div class="container">
@@ -278,55 +104,24 @@
             </div>
         </section>
 
-        <section class="section" id="offers">
-            <div class="container">
-                <h2 class="section__title">Акции и спецпредложения</h2>
-                <div class="cards cards--2">
-                    <article class="card card--offer">
-                        <h3 class="card__title">Скидка до 20% на раннее бронирование</h3>
-                        <p class="card__text">Бронируйте туры за 3–6 месяцев до вылета и получайте дополнительные бонусы.</p>
-                    </article>
-                    <article class="card card--offer">
-                        <h3 class="card__title">Подарочный сертификат на путешествие</h3>
-                        <p class="card__text">Сертификаты на любую сумму — отличный подарок для родных и друзей.</p>
-                    </article>
+        
+        <section class="section" id="location">
+            <div class="container about">
+                <div class="about__content">
+                    <h2 class="section__title">Как нас найти</h2>
+                    <p>Адрес офиса: Нижний Новгород, ул. Максима Горького, 152</p>
+                    <p>Телефон: <a href="tel:+79951209856">+7 (995) 120-98-56</a></p>
+                </div>
+                <div class="about__stats">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/olgatour/49725055542/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">OlgaTour</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/travel_agency/184106432/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Турагентство в Нижнем Новгороде</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/airline_tickets/110327826027/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Авиабилеты в Нижнем Новгороде</a><iframe src="https://yandex.ru/map-widget/v1/?ll=44.004396%2C56.316225&mode=search&oid=49725055542&ol=biz&z=17.51" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
                 </div>
             </div>
         </section>
 
-        <section class="section section--light" id="contacts">
-            <div class="container contacts">
-                <div class="contacts__info">
-                    <h2 class="section__title">Обратная связь</h2>
-                    <p class="section__subtitle">Оставьте заявку — перезвоним и ответим на все вопросы</p>
-                    <ul class="contacts__list">
-                        <li><strong>Телефон:</strong> <a href="tel:+79951209856">+7 (995) 120-98-56</a></li>
-                        <li><strong>Адрес офиса:</strong> Нижний Новгород, ул. Максима Горького, 152</li>
-                    </ul>
-                </div>
-                <div class="contacts__form-wrap">
-                    <form class="form" id="feedback-form">
-                        <div class="form__field">
-                            <label for="feedback-name">Имя</label>
-                            <input type="text" id="feedback-name" name="name" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="feedback-phone">Телефон</label>
-                            <input type="tel" id="feedback-phone" name="phone" required />
-                        </div>
-                        <div class="form__field">
-                            <label for="feedback-message">Ваш вопрос</label>
-                            <textarea id="feedback-message" name="message" rows="3" required></textarea>
-                        </div>
-                        <div class="form__field form__field--inline">
-                            <label class="checkbox">
-                                <input type="checkbox" name="agreement" required />
-                                <span>Соглашаюсь на обработку персональных данных</span>
-                            </label>
-                        </div>
-                        <button class="btn btn--primary" type="submit">Отправить</button>
-                    </form>
-                </div>
+        <section class="section section--light" id="reviews">
+            <div class="container">
+                <h2 class="section__title">Отзывы клиентов</h2>
+                <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49725055542?comments"></iframe><a href="https://yandex.ru/maps/org/olgatour/49725055542/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">OlgaTour на карте Нижнего Новгорода — Яндекс Карты</a></div>
             </div>
         </section>
     </main>
@@ -398,6 +193,5 @@
             </form>
         </div>
     </div>
- <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 </body>
 </html>
