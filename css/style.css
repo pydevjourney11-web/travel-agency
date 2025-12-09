@@ -560,6 +560,61 @@ textarea {
 .reviews__more {
     margin-top: 14px;
 }
+/* Горящие туры */
+.hot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.hot-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+    padding: 14px;
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 24px rgba(8,53,90,0.10);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hot-card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(3,27,47,0.0) 20%, rgba(3,27,47,0.55) 100%);
+    pointer-events: none;
+}
+
+.hot-card__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.hot-card__badge {
+    position: absolute;
+    top: 10px; left: 10px;
+    padding: 4px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    background: #e53935;
+    border-radius: 999px;
+    box-shadow: 0 6px 14px rgba(229, 57, 53, 0.35);
+    z-index: 1;
+}
+
+.hot-card__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
 
 .card--blog .card__meta {
     font-size: 12px;
@@ -830,6 +885,9 @@ textarea {
 
     .partners {
         grid-auto-columns: 44%;
+    }
+    .hot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .chat-widget {

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "deal-1",
+    "title": "Турция · Анталья",
+    "subtitle": "-70%",
+    "image": "",
+    "link": "https://tourcart.ru/#tvofferid=2921696&tvclid=174005"
+  },
+  {
+    "id": "deal-2",
+    "title": "ОАЭ · Рас-эль-Хайма",
+    "subtitle": "-67%",
+    "image": "",
+    "link": "#"
+  },
+  {
+    "id": "deal-3",
+    "title": "Египет · Хургада",
+    "subtitle": "Скидка",
+    "image": "",
+    "link": "#"
+  },
+  {
+    "id": "deal-4",
+    "title": "Таиланд · Пхукет",
+    "subtitle": "Выгодно",
+    "image": "",
+    "link": "#"
+  },
+  {
+    "id": "deal-5",
+    "title": "Вьетнам · Нячанг",
+    "subtitle": "Супер цена",
+    "image": "",
+    "link": "#"
+  }
+]
