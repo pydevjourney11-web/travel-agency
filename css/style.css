@@ -54,6 +54,12 @@ img {
     border-bottom: 1px solid rgba(211, 221, 233, 0.6);
 }
 
+.header--brand {
+    background:
+        linear-gradient(180deg, rgba(0,118,206,0.06), rgba(255,255,255,0.96));
+    border-bottom: 1px solid rgba(0, 102, 179, 0.25);
+}
+
 .header__inner {
     display: flex;
     align-items: center;
@@ -286,6 +292,19 @@ img {
     background-color: var(--color-bg-muted);
 }
 
+.section--hero-blue {
+    background:
+        radial-gradient(70% 60% at 10% 10%, rgba(0,160,255,0.12), rgba(255,255,255,0) 60%),
+        radial-gradient(50% 40% at 90% 20%, rgba(0,118,206,0.10), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f4faff 0%, #ffffff 60%);
+    padding: 56px 0 40px;
+}
+
+.section--hero-blue .section__title,
+.section--hero-blue .section__subtitle {
+    color: #0d2f4a;
+}
+
 .section__title {
     margin: 0 0 8px;
     font-size: 26px;
@@ -446,6 +465,44 @@ textarea {
     margin: 0;
     font-size: 14px;
     color: var(--color-text-muted);
+}
+
+/* Лента партнёров */
+.partners {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 8px 2px 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.partner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 6px 16px rgba(0, 102, 179, 0.08);
+    min-width: 120px;
+    height: 64px;
+}
+
+.partner img {
+    max-height: 40px;
+    width: auto;
+    filter: grayscale(15%);
+    opacity: 0.95;
+    transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.partner:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
 /* Горизонтальные отзывы */
@@ -769,6 +826,10 @@ textarea {
 
     .reviews {
         grid-auto-columns: 88%;
+    }
+
+    .partners {
+        grid-auto-columns: 44%;
     }
 
     .chat-widget {

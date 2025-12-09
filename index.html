@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <script src="js/blog.js" defer></script>
+    <script src="js/partners.js" defer></script>
 </head>
 <body>
     
-    <header class="header">
+    <header class="header header--brand">
         <div class="container header__inner">
             <a href="#top" class="logo">
                 <img src="img/8au8mhl0.png" alt="Логотип турагентства" class="logo__img" />
@@ -41,7 +42,7 @@
     </header>
 
     <main id="top">
-        <section class="section section--light" id="tour-search">
+        <section class="section section--hero-blue" id="tour-search">
             <div class="container">
                 <div class="tv-search-form tv-moduleid-9967577"></div>
                 <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
@@ -56,7 +57,7 @@
             </div>
         </section>
 
-        <section class="section section--light" id="advantages">
+        <section class="section section--brand" id="advantages">
             <div class="container">
                 <h2 class="section__title">Почему выбирают нас</h2>
                 <div class="cards cards--3">
@@ -70,12 +71,7 @@
         <section class="section section--brand" id="partners">
             <div class="container">
                 <h2 class="section__title">Наши партнёры</h2>
-                <div class="cards cards--4">
-                    <article class="card"><h3 class="card__title">Партнёр 1</h3></article>
-                    <article class="card"><h3 class="card__title">Партнёр 2</h3></article>
-                    <article class="card"><h3 class="card__title">Партнёр 3</h3></article>
-                    <article class="card"><h3 class="card__title">Партнёр 4</h3></article>
-                </div>
+                <div id="partners-strip" class="partners" aria-label="Лента логотипов партнёров"></div>
             </div>
         </section>
 

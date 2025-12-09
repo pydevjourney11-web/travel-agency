@@ -36,12 +36,30 @@
     list.forEach(item => {
       const art = document.createElement('article');
       art.className = 'card card--blog';
+
+      if(item.image){
+        const img = document.createElement('img');
+        img.className = 'card__img';
+        img.src = item.image;
+        img.alt = item.title || '';
+        img.loading = 'lazy';
+        art.appendChild(img);
+      }
       const meta = document.createElement('div');
       meta.className = 'card__meta';
       meta.textContent = formatMonth(item.date);
       const h3 = document.createElement('h3');
       h3.className = 'card__title';
-      h3.textContent = item.title;
+      if(item.url){
+        const a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title || '';
+        a.target = item.url.startsWith('http') ? '_blank' : '_self';
+        a.rel = a.target === '_blank' ? 'noopener' : '';
+        h3.appendChild(a);
+      } else {
+        h3.textContent = item.title || '';
+      }
       const p = document.createElement('p');
       p.className = 'card__text';
       p.textContent = item.excerpt;
