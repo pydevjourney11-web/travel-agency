@@ -7,6 +7,7 @@
     <meta name="description" content="Подбор туров, горящие предложения, бронирование отелей в Нижнем Новгороде. Оставьте заявку, и мы подберём лучший отдых под ваш бюджет." />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
+    <script src="js/blog.js" defer></script>
 </head>
 <body>
     
@@ -47,7 +48,7 @@
             </div>
         </section>
 
-        <section class="section" id="telegram">
+        <section class="section section--brand" id="telegram">
             <div class="container">
                 <h2 class="section__title">Следите за новостями в путешествиях</h2>
                 <p class="section__subtitle">Подписывайтесь на наш Telegram-канал с акциями, идеями и лайфхаками</p>
@@ -66,7 +67,7 @@
             </div>
         </section>
 
-        <section class="section" id="partners">
+        <section class="section section--brand" id="partners">
             <div class="container">
                 <h2 class="section__title">Наши партнёры</h2>
                 <div class="cards cards--4">
@@ -84,23 +85,7 @@
             <div class="container">
                 <h2 class="section__title">Блог</h2>
                 <p class="section__subtitle">Полезные советы, идеи для путешествий и подборки направлений</p>
-                <div class="cards cards--3 cards--blog">
-                    <article class="card card--blog">
-                        <div class="card__meta">Ноябрь 2025</div>
-                        <h3 class="card__title">5 идей для зимнего отдыха у моря</h3>
-                        <p class="card__text">Рассказываем, куда отправиться зимой за солнцем и тёплым морем из Нижнего Новгорода...</p>
-                    </article>
-                    <article class="card card--blog">
-                        <div class="card__meta">Октябрь 2025</div>
-                        <h3 class="card__title">Как выбрать отель для семейного отдыха</h3>
-                        <p class="card__text">Делимся критериями, которые помогут выбрать отель с комфортными условиями для всей семьи...</p>
-                    </article>
-                    <article class="card card--blog">
-                        <div class="card__meta">Сентябрь 2025</div>
-                        <h3 class="card__title">Раннее бронирование: как экономить на турах</h3>
-                        <p class="card__text">Почему выгодно планировать путешествие заранее и как мы помогаем экономить клиентам...</p>
-                    </article>
-                </div>
+                <div id="blog-list" class="cards cards--3 cards--blog"></div>
             </div>
         </section>
 
@@ -121,7 +106,35 @@
         <section class="section section--light" id="reviews">
             <div class="container">
                 <h2 class="section__title">Отзывы клиентов</h2>
-                <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49725055542?comments"></iframe><a href="https://yandex.ru/maps/org/olgatour/49725055542/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">OlgaTour на карте Нижнего Новгорода — Яндекс Карты</a></div>
+                <div class="reviews" role="list">
+                    <article class="review-card" role="listitem">
+                        <div class="review-card__header">
+                            <div class="review-card__name">Анна К.</div>
+                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                        </div>
+                        <div class="review-card__text">Очень довольны подбором! Помогли быстро, учли все пожелания, перелёты удобные, отель отличный.</div>
+                        <div class="review-card__meta">Ноябрь 2025</div>
+                    </article>
+                    <article class="review-card" role="listitem">
+                        <div class="review-card__header">
+                            <div class="review-card__name">Евгений П.</div>
+                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                        </div>
+                        <div class="review-card__text">Поддержка на каждом шаге, подсказали хорошие экскурсии. Вернёмся снова!</div>
+                        <div class="review-card__meta">Октябрь 2025</div>
+                    </article>
+                    <article class="review-card" role="listitem">
+                        <div class="review-card__header">
+                            <div class="review-card__name">Мария Л.</div>
+                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                        </div>
+                        <div class="review-card__text">Быстро нашли тур под бюджет, всё чётко по времени и документам. Рекомендую.</div>
+                        <div class="review-card__meta">Сентябрь 2025</div>
+                    </article>
+                </div>
+                <div class="reviews__more">
+                    <a class="btn btn--outline" href="https://yandex.ru/maps/org/olgatour/49725055542/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах</a>
+                </div>
             </div>
         </section>
     </main>

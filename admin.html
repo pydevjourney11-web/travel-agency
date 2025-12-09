@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админка блога</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .admin-wrap{max-width:980px;margin:24px auto;padding:0 16px}
+    .admin-login{max-width:380px;margin:48px auto;padding:18px;border:1px solid var(--color-border);border-radius:12px}
+    .admin-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .list{border:1px solid var(--color-border);border-radius:12px;padding:12px;max-height:60vh;overflow:auto}
+    .item{padding:10px;border-radius:10px;border:1px solid var(--color-border);margin-bottom:10px}
+    .item h4{margin:0 0 6px;font-size:15px}
+    .muted{color:var(--color-text-muted);font-size:12px}
+    .toolbar{display:flex;gap:8px;margin:10px 0}
+    .hidden{display:none}
+  </style>
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-wrap">
+    <h1>Админ-панель блога</h1>
+
+    <section id="login-section" class="admin-login">
+      <h2 class="section__title">Вход</h2>
+      <p class="section__subtitle">Введите пароль администратора, чтобы редактировать записи.</p>
+      <form id="login-form" class="form">
+        <div class="form__field">
+          <label for="admin-pass">Пароль</label>
+          <input id="admin-pass" type="password" required />
+        </div>
+        <button class="btn btn--primary" type="submit">Войти</button>
+      </form>
+    </section>
+
+    <section id="editor-section" class="hidden">
+      <div class="toolbar">
+        <button id="add-post" class="btn btn--primary" type="button">Новая запись</button>
+        <input id="import-file" type="file" accept="application/json" />
+        <button id="export-json" class="btn btn--outline" type="button">Скачать JSON</button>
+        <button id="save-preview" class="btn btn--outline" type="button">Сохранить предпросмотр</button>
+        <button id="clear-preview" class="btn btn--outline" type="button">Сброс предпросмотра</button>
+      </div>
+      <div class="admin-grid">
+        <div>
+          <div class="list" id="posts-list"></div>
+        </div>
+        <div>
+          <form id="post-form" class="form">
+            <input type="hidden" id="post-id" />
+            <div class="form__field">
+              <label for="post-date">Дата</label>
+              <input id="post-date" type="date" required />
+            </div>
+            <div class="form__field">
+              <label for="post-title">Заголовок</label>
+              <input id="post-title" type="text" required />
+            </div>
+            <div class="form__field">
+              <label for="post-excerpt">Краткое описание</label>
+              <textarea id="post-excerpt" rows="4" required></textarea>
+            </div>
+            <div class="form__field">
+              <label for="post-image">Изображение (URL, опц.)</label>
+              <input id="post-image" type="url" placeholder="https://..." />
+            </div>
+            <div class="form__field">
+              <label for="post-url">Ссылка (опц.)</label>
+              <input id="post-url" type="url" placeholder="#" />
+            </div>
+            <div class="toolbar">
+              <button class="btn btn--primary" type="submit">Сохранить</button>
+              <button id="delete-post" class="btn btn--outline" type="button">Удалить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <p class="muted">Примечание: кнопка «Скачать JSON» сохранит файл data/blog.json. Замените им файл на хостинге. «Сохранить предпросмотр» сохраняет данные локально только для вас.</p>
+    </section>
+  </div>
+</body>
+</html>

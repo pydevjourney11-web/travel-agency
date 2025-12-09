@@ -270,6 +270,18 @@ img {
     background-color: var(--color-bg);
 }
 
+.section--brand {
+    background: linear-gradient(135deg, #e6f2ff 0%, #f6fbff 50%, #ffffff 100%);
+}
+
+.section--brand .section__title {
+    color: var(--color-primary);
+}
+
+.section--brand .card {
+    box-shadow: 0 10px 24px rgba(0, 102, 179, 0.12);
+}
+
 .section--muted {
     background-color: var(--color-bg-muted);
 }
@@ -434,6 +446,62 @@ textarea {
     margin: 0;
     font-size: 14px;
     color: var(--color-text-muted);
+}
+
+/* Горизонтальные отзывы */
+.reviews {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 1fr);
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    min-width: 280px;
+    max-width: 360px;
+    box-shadow: 0 6px 16px rgba(5, 51, 89, 0.08);
+    scroll-snap-align: start;
+}
+
+.review-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.review-card__name {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.review-card__stars {
+    color: #f7b500;
+    font-size: 12px;
+}
+
+.review-card__text {
+    color: var(--color-text);
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.review-card__meta {
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.reviews__more {
+    margin-top: 14px;
 }
 
 .card--blog .card__meta {
@@ -697,6 +765,10 @@ textarea {
 
     .section {
         padding: 36px 0;
+    }
+
+    .reviews {
+        grid-auto-columns: 88%;
     }
 
     .chat-widget {
