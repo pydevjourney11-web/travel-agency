@@ -571,7 +571,7 @@ textarea {
 
 .about {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
     gap: 24px;
     align-items: flex-start;
 }
