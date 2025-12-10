@@ -11,7 +11,8 @@
     --radius-lg: 16px;
     --radius-md: 12px;
     --radius-sm: 8px;
-    --reviews-scale: 0.85; /* масштаб Яндекс-виджета отзывов */
+    --reviews-scale: 1.4; /* масштаб Яндекс-виджета отзывов */
+    --reviews-width: 1280px; /* желаемая ширина виджета отзывов */
 }
 
 * {
@@ -294,10 +295,12 @@ img {
 }
 
 .section--hero-blue {
-    background:
-        linear-gradient(0deg, rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
-        url('../img/fon.jpg') center/cover no-repeat;
-    padding: 32px 0 56px;
+    /* Светлее фон + больше изображения, смещаем кадр чтобы убрать полосы */
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('../img/fon.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%, 130% auto; /* показать картинку чуть крупнее */
+    background-position: center, center 30%; /* сместили вниз, чтобы скрыть светлую полосу */
+    padding: 56px 0 80px;
 }
 
 .section--hero-blue .section__title,
@@ -582,9 +585,20 @@ textarea {
 
 .reviews-widget > div {
     transform: scale(var(--reviews-scale));
-    transform-origin: top left;
-    width: calc(560px * var(--reviews-scale)) !important;
+    transform-origin: top center;
+    width: min(100%, var(--reviews-width)) !important; /* делаем шире */
     height: calc(800px * var(--reviews-scale)) !important;
+}
+
+/* Адаптив: уменьшаем масштаб на меньших экранах */
+@media (max-width: 1200px) {
+  :root { --reviews-scale: 1.2; --reviews-width: 1040px; }
+}
+@media (max-width: 992px) {
+  :root { --reviews-scale: 1.0; --reviews-width: 880px; }
+}
+@media (max-width: 768px) {
+  :root { --reviews-scale: 0.9; --reviews-width: 600px; }
 }
 /* Горящие туры */
 .hot-grid {
