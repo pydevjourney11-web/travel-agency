@@ -601,6 +601,99 @@ textarea {
 @media (max-width: 768px) {
   :root { --reviews-scale: 0.88; --reviews-width: 560px; }
 }
+/* Key features (5 карточек) */
+.features {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.feature-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 16px 18px 16px;
+    box-shadow: 0 10px 24px rgba(8, 53, 90, 0.08);
+    overflow: hidden;
+}
+
+.feature-card__img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+.feature-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card__title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.feature-card__text {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  .features { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+/* Промо блок (2 карточки с фоном) */
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.promo-card {
+    position: relative;
+    min-height: 220px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 24px rgba(8, 53, 90, 0.08);
+}
+
+.promo-card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(3,27,47,0.10) 0%, rgba(3,27,47,0.55) 100%);
+}
+
+.promo-card__content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.promo-card__title { margin: 0; font-size: 18px; font-weight: 800; }
+.promo-card__text { margin: 0; font-size: 14px; opacity: 0.95; }
+
+@media (max-width: 992px) {
+  .promo-grid { grid-template-columns: 1fr; }
+}
 /* Горящие туры */
 .hot-grid {
     display: grid;
