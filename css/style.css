@@ -296,7 +296,7 @@ img {
 
 .section--hero-blue {
     /* Более отчётливое и крупное изображение, без белой полосы */
-    background-image: linear-gradient(0deg, rgba(255,255,255,0.18), rgba(255,255,255,0.18)), url('../img/fon.jpg');
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.18), rgba(255,255,255,0.18)), url('../Img/fon.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* заполняем, без свободных областей */
     background-position: center 72%; /* смещаем ниже, чтобы скрыть светлую полосу сверху */
@@ -613,25 +613,29 @@ textarea {
     background: #fff;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    padding: 18px 16px 18px 16px;
+    padding: 24px 18px 24px 18px;
+    padding-right: 170px; /* место под угловую картинку */
+    min-height: 280px;
     box-shadow: 0 10px 24px rgba(8, 53, 90, 0.08);
     overflow: hidden;
 }
 
 .feature-card__img {
     position: absolute;
-    top: 10px;
     right: 10px;
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
+    bottom: 8px;
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    opacity: 0.9;
+    pointer-events: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
 }
 .feature-card__img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .feature-card__title {
@@ -662,7 +666,7 @@ textarea {
 
 .promo-card {
     position: relative;
-    min-height: 220px;
+    min-height: 260px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     background-size: cover;
@@ -686,10 +690,21 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    height: 100%;
 }
 
 .promo-card__title { margin: 0; font-size: 18px; font-weight: 800; }
 .promo-card__text { margin: 0; font-size: 14px; opacity: 0.95; }
+
+/* Кнопку Telegram делаем меньше и фиксируем в левом нижнем углу карточки */
+.promo-card__content .btn {
+    align-self: flex-start;
+    margin-top: auto;
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
 
 @media (max-width: 992px) {
   .promo-grid { grid-template-columns: 1fr; }
