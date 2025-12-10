@@ -295,15 +295,21 @@ img {
 
 .section--hero-blue {
     background:
-        radial-gradient(70% 60% at 10% 10%, rgba(0,160,255,0.12), rgba(255,255,255,0) 60%),
-        radial-gradient(50% 40% at 90% 20%, rgba(0,118,206,0.10), rgba(255,255,255,0) 60%),
-        linear-gradient(180deg, #f4faff 0%, #ffffff 60%);
-    padding: 56px 0 40px;
+        linear-gradient(0deg, rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
+        url('../img/fon.jpg') center/cover no-repeat;
+    padding: 32px 0 56px;
 }
 
 .section--hero-blue .section__title,
 .section--hero-blue .section__subtitle {
     color: #0d2f4a;
+}
+
+#tour-search .tv-search-form {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 12px;
 }
 
 .section__title {
