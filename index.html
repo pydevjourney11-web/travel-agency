@@ -10,8 +10,22 @@
     <script src="js/blog.js" defer></script>
     <script src="js/partners.js" defer></script>
     <script src="js/hot-deals.js" defer></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105757534', 'ym');
+
+        ym(105757534, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105757534" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     
     <header class="header header--brand">
         <div class="container header__inner">
@@ -54,7 +68,7 @@
             <div class="container">
                 <h2 class="section__title">Следите за новостями в путешествиях</h2>
                 <p class="section__subtitle">Подписывайтесь на наш Telegram-канал с акциями, идеями и лайфхаками</p>
-                <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Подписаться в Telegram</a>
+                <a class="btn btn--primary" href="https://t.me/olgatour2012" target="_blank" rel="noopener">Подписаться в Telegram</a>
             </div>
         </section>
 
@@ -66,7 +80,6 @@
                     <article class="card card--service"><h3 class="card__title">Поддержка 24/7</h3><p class="card__text">Всегда на связи до и во время путешествия.</p></article>
                     <article class="card card--service"><h3 class="card__title">Честные цены</h3><p class="card__text">Прозрачные условия без скрытых платежей.</p></article>
                     <article class="card card--service"><h3 class="card__title">Авиабилеты</h3><p class="card__text">Подберём удобные маршруты и тарифы.</p></article>
-                    <article class="card card--service"><h3 class="card__title">Экскурсии</h3><p class="card__text">Групповые и индивидуальные программы по городам России и мира.</p></article>
                 </div>
             </div>
         </section>
@@ -82,7 +95,7 @@
 
         <section class="section section--light" id="blog">
             <div class="container">
-                <h2 class="section__title">Блог</h2>
+                <h2 class="section__title">Блог об интересных путешествиях</h2>
                 <p class="section__subtitle">Полезные советы, идеи для путешествий и подборки направлений</p>
                 <div id="blog-list" class="cards cards--3 cards--blog"></div>
             </div>
@@ -91,7 +104,7 @@
         <section class="section" id="hot-deals">
             <div class="container">
                 <h2 class="section__title">🔥 Горящие туры — отдых мечты по цене выходного дня!</h2>
-                <p class="section__subtitle">Ежедневно обновляемые спецпредложения от ведущих туроператоров. Скидки до 50%.</p>
+                <p class="section__subtitle">Ежедневно обновляемые спецпредложения от ведущих туроператоров. Скидки до 70%.</p>
                 <div id="hot-deals-list" class="hot-grid"></div>
                 <div class="reviews__more" style="margin-top:14px;">
                     <a class="btn btn--outline" href="/goryachie-tury">Все выгодные предложения</a>
@@ -108,11 +121,8 @@
                     <p>Телефон: <a href="tel:+79951209856">+7 (995) 120-98-56</a></p>
                 </div>
                 <div class="about__stats">
-                    <div style="position:relative;overflow:hidden;">
-                        <a href="https://yandex.ru/maps/org/olgatour/49725055542/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">OlgaTour</a>
-                        <a href="https://yandex.ru/maps/47/nizhny-novgorod/category/travel_agency/184106432/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Турагентство в Нижнем Новгороде</a>
-                        <a href="https://yandex.ru/maps/47/nizhny-novgorod/category/airline_tickets/110327826027/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Авиабилеты в Нижнем Новгороде</a>
-                        <iframe src="https://yandex.ru/map-widget/v1/?ll=44.004396%2C56.316225&mode=search&oid=49725055542&ol=biz&z=17.51" width="100%" height="420" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                    <div class="map-widget">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/olgatour/49725055542/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">OlgaTour</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/travel_agency/184106432/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Турагентство в Нижнем Новгороде</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/airline_tickets/110327826027/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Авиабилеты в Нижнем Новгороде</a><iframe src="https://yandex.ru/map-widget/v1/?ll=44.004396%2C56.316225&mode=search&oid=49725055542&ol=biz&z=17.51" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
                     </div>
                 </div>
             </div>
@@ -121,34 +131,8 @@
         <section class="section section--light" id="reviews">
             <div class="container">
                 <h2 class="section__title">Отзывы клиентов</h2>
-                <div class="reviews" role="list">
-                    <article class="review-card" role="listitem">
-                        <div class="review-card__header">
-                            <div class="review-card__name">Анна К.</div>
-                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        </div>
-                        <div class="review-card__text">Очень довольны подбором! Помогли быстро, учли все пожелания, перелёты удобные, отель отличный.</div>
-                        <div class="review-card__meta">Ноябрь 2025</div>
-                    </article>
-                    <article class="review-card" role="listitem">
-                        <div class="review-card__header">
-                            <div class="review-card__name">Евгений П.</div>
-                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        </div>
-                        <div class="review-card__text">Поддержка на каждом шаге, подсказали хорошие экскурсии. Вернёмся снова!</div>
-                        <div class="review-card__meta">Октябрь 2025</div>
-                    </article>
-                    <article class="review-card" role="listitem">
-                        <div class="review-card__header">
-                            <div class="review-card__name">Мария Л.</div>
-                            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
-                        </div>
-                        <div class="review-card__text">Быстро нашли тур под бюджет, всё чётко по времени и документам. Рекомендую.</div>
-                        <div class="review-card__meta">Сентябрь 2025</div>
-                    </article>
-                </div>
-                <div class="reviews__more">
-                    <a class="btn btn--outline" href="https://yandex.ru/maps/org/olgatour/49725055542/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах</a>
+                <div class="reviews-widget">
+                    <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49725055542?comments"></iframe><a href="https://yandex.ru/maps/org/olgatour/49725055542/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">OlgaTour на карте Нижнего Новгорода — Яндекс Карты</a></div>
                 </div>
             </div>
         </section>

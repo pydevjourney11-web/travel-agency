@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatButton = document.querySelector(".chat-button");
     const chatWidget = document.querySelector(".chat-widget");
     const chatClose = document.querySelector(".chat-widget__close");
+    const chatHeaderTitle = document.querySelector(".chat-widget__header span");
     const heroCtaButtons = document.querySelectorAll(".js-open-tour-modal");
     const modal = document.querySelector("#tour-modal");
     const modalOverlay = modal ? modal.querySelector(".modal__overlay") : null;
@@ -62,6 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
             chatWidget.classList.remove("chat-widget--open");
             chatWidget.setAttribute("aria-hidden", "true");
         }
+    }
+
+    function isWorkingTime() {
+        // Локальное время. Рабочие дни: Пн-Вс, часы: 10:00–20:00
+        const now = new Date();
+        const h = now.getHours();
+        return h >= 10 && h < 20; // при необходимости скорректируем под ваш график
+    }
+
+    // Проставим статус онлайн/офлайн
+    if (chatButton) {
+        const btnSpan = chatButton.querySelector('span');
+        if (btnSpan) {
+            btnSpan.textContent = isWorkingTime() ? 'Онлайн-чат' : 'Оставить заявку';
+        }
+    }
+    if (chatHeaderTitle) {
+        chatHeaderTitle.textContent = isWorkingTime() ? 'Онлайн-чат' : 'Обратная связь';
     }
 
     if (chatButton) {

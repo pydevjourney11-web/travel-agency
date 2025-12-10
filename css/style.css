@@ -69,7 +69,7 @@ img {
 }
 
 .logo__img {
-    height: 44px;
+    height: 56px;
     width: auto;
 }
 
@@ -476,7 +476,11 @@ textarea {
     overflow-x: auto;
     padding: 8px 2px 6px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
+
+.partners::-webkit-scrollbar { display: none; }
 
 .partner {
     display: inline-flex;
@@ -572,6 +576,7 @@ textarea {
     display: flex;
     align-items: flex-end;
     min-height: 200px;
+    aspect-ratio: 9 / 16;
     padding: 14px;
     border-radius: var(--radius-lg);
     background: #ffffff;
@@ -620,13 +625,21 @@ textarea {
     font-size: 12px;
 }
 
+.card--blog .card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+}
+
 .card--offer {
     border-left: 3px solid var(--color-accent);
 }
 
 .about {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
     gap: 24px;
     align-items: flex-start;
 }
@@ -640,6 +653,33 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+}
+
+/* В секции с картой убираем сетку и растягиваем виджет */
+#location .about__stats {
+    display: block;
+}
+
+.map-widget iframe {
+    width: 100% !important;
+    height: 560px !important;
+}
+
+.map-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 20px rgba(11, 56, 92, 0.08);
+}
+
+.map-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .about__stat {
